@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrolled Students</title>
+  <script type="text/javascript" src="myscript.js"></script>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+    }
+
+    .container {
+      width: min(92%, 800px);
+      margin: 0 auto;
+      padding-top: 60px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 8px 24px rgba(213, 215, 219, 0.08);
+    }
+
+    th,
+    td {
+      padding: 14px;
+      border: 1px solid #dbe4ef;
+      text-align: left;
+      background: #dbe4ef;
+    }
+
+    th {
+      background: #2563eb;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 18px;
+      border-radius: 6px;
+      background: #475569;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Enrollment Status</h1>
+
+     <table align="center" border="1" style="background-color: black;">
+            <tr align="center" style="background-color: lightblue;">
+                <th width="100">Name</th>
+                <th width="200">Email Id</th>
+                <th width="150">Course Name</th>
+            </tr>
+
+            <tbody align="center" id="enrolledtable"></tbody> <!--Table body where rows will be inserted -->
+        </table>
+
+
+        <script type="text/javascript">
+            window.onload = function(){
+                showEnrolledStudents();
+            };
+        </script>
+
+    <a class="back-link" href="index.html">Back to Home</a>
+  </main>
+</body>
+</html>

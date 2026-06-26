@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Courses</title>
+  <script type="text/javascript" src="myscript.js"></script>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+    }
+
+    .container {
+      width: min(92%, 800px);
+      margin: 0 auto;
+      padding-top: 60px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    th,
+    td {
+      padding: 14px;
+      border: 1px solid #dbe4ef;
+      text-align: left;
+      background: #edeef0;
+
+    }
+
+    th {
+      background: #2563eb;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 18px;
+      border-radius: 6px;
+      background: #475569;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <table align="center" border="1" style="background-color: black;">
+            <tr align="center" style="background-color: lightblue;">
+                <th width="100">Course Id</th>
+                <th width="150">Course Name</th>
+                <th width="150">Trainer</th>
+                <th width="140">Duration in weeks</th>
+            </tr>
+
+            <tbody align="center" id="coursetable"></tbody> <!--Table body where rows will be inserted -->
+        </table>
+
+
+        <script type="text/javascript">
+            window.onload = function(){
+                showCourses();
+            };
+        </script>
+
+    <a class="back-link" href="index.html">Back to Home</a>
+  </main>
+</body>
+</html>

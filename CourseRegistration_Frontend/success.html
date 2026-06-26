@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Status</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #eef4fb;
+      color: #1f2937;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: min(90%, 520px);
+      padding: 34px;
+      border-radius: 8px;
+      background: white;
+      text-align: center;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      color: #2563eb;
+      font-size: 30px;
+    }
+
+    .message {
+      margin: 0 0 28px;
+      color: #4b5563;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .link-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    a {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .secondary-link {
+      background: #475569;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Registration Status</h1>
+    <p id="message" class="message">Your registration request has been submitted.</p>
+
+    <div class="link-group">
+      <a href="register.html">Register Another Course</a>
+      <a class="secondary-link" href="index.html">Back to Home</a>
+    </div>
+  </main>
+
+  <script>
+    const message = sessionStorage.getItem("registrationMessage");
+
+    if (message) {
+      document.getElementById("message").textContent = message;
+      sessionStorage.removeItem("registrationMessage");
+    }
+  </script>
+</body>
+</html>
